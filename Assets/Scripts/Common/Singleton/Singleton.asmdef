@@ -1,0 +1,16 @@
+{
+    "name": "Common.Singleton",
+    "rootNamespace": "",
+    "references": [
+        "GUID:748d88599747faf4ea9a1ed8554a0596"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
