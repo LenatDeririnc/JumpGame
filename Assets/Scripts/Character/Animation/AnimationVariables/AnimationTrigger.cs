@@ -1,4 +1,4 @@
-﻿namespace Character.Animation.AnimationStates
+﻿namespace Character.Animation.AnimationVariables
 {
     public class AnimationTrigger : IAnimationTrigger
     {

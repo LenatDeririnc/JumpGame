@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Character.Animation.AnimationStates
+namespace Character.Animation.AnimationVariables
 {
-    [CreateAssetMenu(fileName = "Animation State", menuName = "Animation/Animation Bool State", order = 1)]
+    [CreateAssetMenu(fileName = "Animation Bool State", menuName = "Animation/AnimationBoolState", order = 2)]
     public class AnimationBoolObject : ScriptableObject, IAnimationBool
     {
         [SerializeField] private string _boolName;
@@ -10,8 +10,10 @@ namespace Character.Animation.AnimationStates
 
         private IAnimationBool subclass;
         
-        private void OnValidate() => 
+        private void OnEnable()
+        {
             subclass = new AnimationBool(_boolName, _value);
+        }
 
         public string BoolName => subclass.BoolName;
         public bool BoolValue

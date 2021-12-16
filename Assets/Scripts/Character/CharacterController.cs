@@ -1,15 +1,15 @@
 ﻿using System;
 using Character.Animation;
-using Character.Animation.AnimationStates;
+using Character.Animation.AnimationVariables;
 using Character.StateMachine;
 using Common;
+using Common.CoroutineHelpers;
 using Common.Singleton;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace Character
 {
-    public class CharacterController : Singleton<CharacterController>, IUpdater, IFixedUpdater
+    public class CharacterController : Singleton<CharacterController>, IUpdater, IFixedUpdater, ICoroutineRunner
     {
         [SerializeField] private AnimationSwitcher _switcher;
         [SerializeField] private AnimationBoolObject _groundedAnimationBool;
@@ -61,6 +61,12 @@ namespace Character
         {
             var pointer = _stateMachine.CurrentState as IPointerDown;
             pointer?.OnPointerDown();
+        }
+
+        public void OnPointerUp()
+        {
+            var pointer = _stateMachine.CurrentState as IPointerUp;
+            pointer?.OnPointerUp();
         }
     }
 }

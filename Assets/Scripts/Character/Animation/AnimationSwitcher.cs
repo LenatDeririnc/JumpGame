@@ -1,4 +1,4 @@
-﻿using Character.Animation.AnimationStates;
+﻿using Character.Animation.AnimationVariables;
 using UnityEngine;
 
 namespace Character.Animation

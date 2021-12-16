@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Character.StateMachine.States;
 
 namespace Character.StateMachine
 {
@@ -13,8 +14,7 @@ namespace Character.StateMachine
             
             AddState(new ReadyForJumpState(this, controller));
             AddState(new JumpState(this, controller));
-            
-            Enter(ReadyForJumpState.CLASS_NAME);
+            AddState(new WaitForSafeLand(this, controller));
         }
 
         private void AddState(ICharacterState state)
@@ -22,9 +22,9 @@ namespace Character.StateMachine
             _states[state.ToString()] = state;
         }
 
-        public void Enter(string StateName)
+        public void Enter(string stateName)
         {
-            CurrentState = _states[StateName];
+            CurrentState = _states[stateName];
             CurrentState.OnEnter();
         }
     }

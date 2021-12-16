@@ -1,8 +1,8 @@
-﻿namespace Character.StateMachine
+﻿namespace Character.StateMachine.States
 {
     public class ReadyForJumpState : ICharacterState, IPointerDown
     {
-        public const string CLASS_NAME = "ReadyForJumpState";
+        public const string ClassName = "ReadyForJumpState";
         
         private readonly CharacterStateMachine _stateMachine;
         private readonly CharacterController _controller;
@@ -18,10 +18,10 @@
 
         public void OnPointerDown()
         {
-            _stateMachine.Enter(JumpState.CLASS_NAME);
+            _stateMachine.Enter(JumpState.ClassName);
         }
 
         public override string ToString() => 
-            CLASS_NAME;
+            ClassName;
     }
 }
