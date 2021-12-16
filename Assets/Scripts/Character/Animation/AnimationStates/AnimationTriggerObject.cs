@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Character.Animation.AnimationStates
 {
@@ -6,6 +7,14 @@ namespace Character.Animation.AnimationStates
     public class AnimationTriggerObject : ScriptableObject, IAnimationTrigger
     {
         [SerializeField] private string triggerName;
-        public string TriggerName => triggerName;
+
+        private IAnimationTrigger subclass;
+
+        private void OnValidate()
+        {
+            subclass = new AnimationTrigger(triggerName);
+        }
+
+        public string TriggerName => subclass.TriggerName;
     }
 }

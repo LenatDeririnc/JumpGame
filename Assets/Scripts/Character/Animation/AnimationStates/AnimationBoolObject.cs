@@ -7,11 +7,17 @@ namespace Character.Animation.AnimationStates
     {
         [SerializeField] private string _boolName;
         [SerializeField] private bool _value;
-        public string BoolName => _boolName;
+
+        private IAnimationBool subclass;
+        
+        private void OnValidate() => 
+            subclass = new AnimationBool(_boolName, _value);
+
+        public string BoolName => subclass.BoolName;
         public bool BoolValue
         {
-            get => _value;
-            set => _value = value;
+            get => subclass.BoolValue;
+            set => subclass.BoolValue = value;
         }
     }
 }
