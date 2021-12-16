@@ -1075,6 +1075,7 @@ GameObject:
   - component: {fileID: 2559459426730659566}
   - component: {fileID: 2510289541039384842}
   - component: {fileID: 5080428831734231954}
+  - component: {fileID: 5473602039619976412}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1130,7 +1131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48be927ddb784bd588e979ca54ee2379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultState: {fileID: 11400000, guid: 1bd9adb13082d8f468e15e693a6692b4, type: 2}
+  defaultTrigger: {fileID: 11400000, guid: 1383d379c88001d4699eb487ba13d6e0, type: 2}
 --- !u!114 &5080428831734231954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1144,7 +1145,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _switcher: {fileID: 2510289541039384842}
-  _jumpState: {fileID: 11400000, guid: d60cd40403f99044dbbeda651f792b71, type: 2}
+  _jumpTrigger: {fileID: 11400000, guid: e6081299757dc2c41b91783a7bd49e45, type: 2}
+  _groundedAnimationBool: {fileID: 11400000, guid: 246201deefffa0042bb83e4e7e972192, type: 2}
+  _characterController: {fileID: 5473602039619976412}
+  _jumpHeight: 0.25
+  _mass: 0.25
+--- !u!143 &5473602039619976412
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2509118005993213202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.22
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &2509123632142196104
 GameObject:
   m_ObjectHideFlags: 0
