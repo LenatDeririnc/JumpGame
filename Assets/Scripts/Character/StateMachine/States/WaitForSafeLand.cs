@@ -1,4 +1,5 @@
 ﻿using Character.Animation.AnimationVariables;
+using Common;
 using Common.CoroutineHelpers.Timer;
 
 namespace Character.StateMachine.States
@@ -10,7 +11,7 @@ namespace Character.StateMachine.States
         
         private const float WaitTime = 0.5f;
         
-        private readonly CharacterStateMachine _stateMachine;
+        private readonly IStateMachineEnter _stateMachine;
         private readonly CharacterController _controller;
         private readonly Timer _timer;
 
@@ -18,7 +19,7 @@ namespace Character.StateMachine.States
 
         private bool _isPointeredUp = false;
         
-        public WaitForSafeLand(CharacterStateMachine stateMachine, CharacterController controller)
+        public WaitForSafeLand(IStateMachineEnter stateMachine, CharacterController controller)
         {
             _stateMachine = stateMachine;
             _controller = controller;

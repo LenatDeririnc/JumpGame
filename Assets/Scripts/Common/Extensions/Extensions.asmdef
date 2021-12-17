@@ -1,0 +1,16 @@
+{
+    "name": "Common.Extensions",
+    "rootNamespace": "",
+    "references": [
+        "Common.Algorithms"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

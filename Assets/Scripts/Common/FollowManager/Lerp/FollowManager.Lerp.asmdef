@@ -1,0 +1,19 @@
+{
+    "name": "Common.FollowManager.Lerp",
+    "rootNamespace": "",
+    "references": [
+        "Common.CharpHelpers",
+        "Common.LerpAdapter",
+        "Common.Extensions",
+        "Common.FollowManager"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

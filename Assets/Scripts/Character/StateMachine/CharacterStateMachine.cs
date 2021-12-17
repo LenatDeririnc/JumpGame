@@ -3,7 +3,7 @@ using Character.StateMachine.States;
 
 namespace Character.StateMachine
 {
-    public class CharacterStateMachine
+    public class CharacterStateMachine : IStateMachineEnter
     {
         private Dictionary<string, ICharacterState> _states;
         public ICharacterState CurrentState { get; private set; }

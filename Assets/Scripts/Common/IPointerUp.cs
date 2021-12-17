@@ -1,4 +1,4 @@
-﻿namespace Character
+﻿namespace Common
 {
     public interface IPointerUp
     {

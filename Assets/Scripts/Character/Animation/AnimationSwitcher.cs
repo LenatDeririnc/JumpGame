@@ -9,6 +9,8 @@ namespace Character.Animation
         
         private Animator _switcher;
 
+        public Animator Animator => _switcher;
+
         private void Awake() => 
             _switcher = GetComponent<Animator>();
 

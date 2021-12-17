@@ -9,7 +9,7 @@ namespace Character.StateMachine.States
         
         private readonly CharacterController _controller;
 
-        public JumpState(CharacterStateMachine stateMachine, CharacterController controller)
+        public JumpState(IStateMachineEnter stateMachine, CharacterController controller)
         {
             _controller = controller;
         }
