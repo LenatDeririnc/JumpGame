@@ -1576,9 +1576,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2505901316779149896}
   - component: {fileID: 2559459426730659566}
-  - component: {fileID: 2510289541039384842}
   - component: {fileID: 5080428831734231954}
   - component: {fileID: 5473602039619976412}
+  - component: {fileID: 2944284530449927856}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -1622,19 +1622,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2510289541039384842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2509118005993213202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48be927ddb784bd588e979ca54ee2379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultTrigger: {fileID: 11400000, guid: 1383d379c88001d4699eb487ba13d6e0, type: 2}
 --- !u!114 &5080428831734231954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,11 +1634,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12821c130be34df0867f41102b27c082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _switcher: {fileID: 2510289541039384842}
-  _groundedAnimationBool: {fileID: 11400000, guid: 246201deefffa0042bb83e4e7e972192, type: 2}
   _characterController: {fileID: 5473602039619976412}
   _jumpHeight: 0.25
   _mass: 0.25
+  _ragdollHelper: {fileID: 2944284530449927856}
+  _animator: {fileID: 2559459426730659566}
+  GroundedAnimatorBoolName: isGrounded
 --- !u!143 &5473602039619976412
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1670,6 +1658,21 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2944284530449927856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2509118005993213202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c8a65700a044c58e2ac0550a86f6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseTransform: {fileID: 2303708786782950875}
+  _animator: {fileID: 2559459426730659566}
+  capsuleColider: {fileID: 0}
 --- !u!1 &2509123632142196104
 GameObject:
   m_ObjectHideFlags: 0
