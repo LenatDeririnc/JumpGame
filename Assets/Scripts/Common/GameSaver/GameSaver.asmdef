@@ -1,11 +1,7 @@
 {
-    "name": "Common.UIHelpers",
+    "name": "Common.GameSaver",
     "rootNamespace": "",
-    "references": [
-        "Common.Singleton",
-        "Unity.TextMeshPro",
-        "Common.GameSaver"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

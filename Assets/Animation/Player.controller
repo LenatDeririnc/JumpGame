@@ -12,6 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f7dafc535d42948256c814cf754906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8371115909800993198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea28cef83454370bb1b1862b2abd5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GetUpBoolName: PlayGetUp
+  timing: 0.1
 --- !u!1102 &-8058541092267809028
 AnimatorState:
   serializedVersion: 6
@@ -520,7 +534,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -134132070743882197}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -8371115909800993198}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

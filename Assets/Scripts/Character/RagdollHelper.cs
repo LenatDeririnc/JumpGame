@@ -73,7 +73,6 @@ namespace Character
             capsuleColider.enabled = !value;
             _enableKinematicToAll(!value);
             // _enableColliders(value);
-            _animator.enabled = !value;
         }
         
     }

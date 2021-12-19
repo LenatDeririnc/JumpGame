@@ -31,6 +31,7 @@ namespace Character.Animation.AnimationBehaviours
         private void OnFallTimerEnd()
         {
             _helper.EnableRagdoll(true);
+            _animator.enabled = false;
             
             _riseTimer = 
                 new Timer(
@@ -43,6 +44,7 @@ namespace Character.Animation.AnimationBehaviours
         private void OnRiseTimerEnd()
         {
             _helper.EnableRagdoll(false);
+            _animator.enabled = true;
             _animator.SetTrigger(GetUpBoolName);
         }
     }
