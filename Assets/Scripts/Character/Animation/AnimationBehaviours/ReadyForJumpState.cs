@@ -10,6 +10,9 @@ namespace Character.Animation.AnimationBehaviours
 
         public override void Action()
         {
+            if (GetUpEnding.GetUpEndingPlaying)
+                return;
+            
             _animator.SetTrigger(JumpTriggerName);
             _characterController.GravityCalculator.currentFallingSpeed = - _characterController.JumpHeight;
             _characterController.GravityCalculator.UpdateMove();
